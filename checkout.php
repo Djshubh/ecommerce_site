@@ -1,8 +1,9 @@
  <!DOCTYPE HTML>
  <?php
+  session_start();
+
   include("functions/functions.php");
-  //session_start();
-?>
+?> 
 <html>
 	<head>
 		<title>My Online Shop</title>

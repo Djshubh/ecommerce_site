@@ -1,5 +1,6 @@
  <!DOCTYPE HTML>
  <?php
+  session_start();
   include("functions/functions.php");
   include("includes/db.php");
 ?>
@@ -92,10 +93,10 @@
 							</tr>
 							<tr>
 								<td align="right">Customer Image : </td>
-								<td><input type="file" name="c_pass"/ ></td>
+								<td><input type="file" name="c_image"/ ></td>
 							</tr>
 							<tr>
-								<td align="right">Cusotmer Country :</td>
+								<td align="right">Customer Country :</td>
 								<td>
 									<select name="c_country">
 										<option>Select a country</option>
@@ -111,7 +112,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="right">Cusotmer City : </td>
+								<td align="right">Customer City : </td>
 								<td><input type="text" name="c_city" /></td>
 							</tr>
 							<tr>
@@ -163,8 +164,27 @@
 
 		$run_c = mysqli_query($con, $insert_c);
 
-		if($run_c)	{
-			echo "<script>alert('Registration Successful!!')</script>";
+		$sel_cart = "select *from cart where ip_add='$ip'";
+
+		$run_cart = mysqli_query($con, $sel_cart);
+
+		$check_cart = mysqli_num_rows($run_cart);
+
+		if(check_cart==0) {
+		
+			$_SESSION['customer_email']= $c_email;
+
+			echo "<script>alert('Account has been created successfully, Thanks!')</script>";
+			echo "<script>window.open('customer/my_account.php','_self')</script>";
+
 		}
+		else {
+			$_SESSION['customer_email']= $c_email;
+
+			echo "<script>alert('Account has been created successfully, Thanks!')</script>";
+			echo "<script>window.open('checkout.php','_self')</script>";
+
+		}
+
 	}
 ?>
