@@ -64,7 +64,18 @@
 				<?php 	cart();  ?>	
 				<div id="shopping_cart">
  					<span style="float:right font-size:10px; padding:5px; line-height: 40px; ">
- 						Welcome Guest!  <b style="color:yelow"> Shopping Cart</b>
+ 						
+ 				 <?php
+ 					 if(isset($_SESSION['customer_email'])){
+ 					 	echo "<b>Welcome: </b> ". $_SESSION['customer_email']. "<b style='color: yellow;'> Your</b>";
+
+ 					}
+ 					else {
+ 					echo "<b>Welcome Guest!</b>"; 
+ 					}
+ 				?>	
+
+ 						  <b style="color:yelow"> Shopping Cart</b>
  						 Total Items : $<?php total_items();?> Total Price : <?php  total_price(); ?>
  						<a href="cart.php">Go to cart</a>
  					

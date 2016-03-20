@@ -1,11 +1,20 @@
 <!DOCTYPE >
 <?php
 
+ @session_start();
+
+ if(!isset($_SESSION['user_email'])){
+
+ 	echo "<script>window.open('login.php?not_admin=You are not an Admin!','_self')</script>";
+
+ }
+ else {
+
 	include("includes/db.php");
 ?>
 <html>
 	<head>
-		<title>INserting Products</title>
+		<title>Inserting Products</title>
 		<script src="js/tinymce/tinymce.min.js">
 		</script>
 		<script>
@@ -16,7 +25,7 @@
 <body bgcolor="skyblue">
 	<form action="insert_product.php" method= "post" enctype="multipart/form-data">
 
-		<table align="center" width = "750" border="2" bgcolor="orange">
+		<table align="center" width = "795" border="2" bgcolor="#187ee5">
 			<tr align = "center"> 
 				<td colspan="7"><h2>Insert New Post </h2></td>
 			</tr>
@@ -109,6 +118,6 @@
 		mysqli_query($con,$insert_product);
 	
 	}
-
+}
 
 ?>

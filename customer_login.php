@@ -1,6 +1,6 @@
 <div>
 
-	<form method="post" action="">
+	<form method="post" action="login_check.php">
 
 		<table width="500" align="center" bgcolor="skyblue">
 			<tr align="center">
@@ -23,7 +23,7 @@
 			</tr>	
 		
 		</table>	
-			<h3 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration: none">
+			<h3 style="float :right; padding-right:20px;"><a href="customer_register.php" style="text-decoration: none">
 				New User ? Register Here </a></h2> 
 	</form>		 
 </div>		

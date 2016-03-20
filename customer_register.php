@@ -170,12 +170,12 @@
 
 		$check_cart = mysqli_num_rows($run_cart);
 
-		if(check_cart==0) {
+		if($check_cart==0) {
 		
 			$_SESSION['customer_email']= $c_email;
 
 			echo "<script>alert('Account has been created successfully, Thanks!')</script>";
-			echo "<script>window.open('customer/my_account.php','_self')</script>";
+			echo "<script>window.open('customer/myaccount.php','_self')</script>";
 
 		}
 		else {

@@ -1,0 +1,169 @@
+   /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	background: #72AC93;
+
+}
+
+
+
+.main_wrapper {
+width : 1000px;
+height : auto;
+margin: auto;
+
+}
+
+.header_wrapper {
+width : 1000px;
+height :100px;
+margin: auto;
+
+}
+
+#logo { float : left;
+	    height : 100px;
+   }
+
+ #banner { float : right;
+           height : 100px;}
+ 
+ .menubar {
+ 	width :1000px ;
+ 	height: 50px;
+ 	background: #98002F;
+ 	color : white;
+ }
+
+ #menu {
+padding : 0;
+margin : 0;
+line-height: 35px;   
+
+ }
+
+ #menu li {
+ 	list-style: none;
+ 	display: inline;
+ }
+
+ #menu a {
+ 	text-decoration: none;
+ 	color : white;
+ 	padding: 0px;
+ 	margin : 5px;
+ 	font-size: 18px;
+ 	font-family: COMIC SANS MS;
+ }
+#form {	float :right ; 
+		padding-right: 8px; 
+		line-height: 50px;  }
+menu a:hover {color: orange; }
+ .content_wrapper {
+  width : 1000px;
+  height : 800px;
+  margin:auto;
+  background : #9BCE7D;
+ }
+
+ #content_area {
+width : 750px;
+min-height : 800px;
+float : left;
+background : #9BCE7D; 
+ }
+
+ #sidebar {
+width : 250px;
+height : 800px;
+background : #699E87;
+float : right; 
+ }
+
+#sidebar_title {
+background: white;
+color: black;
+font-size: 22px;
+font-family: arial;
+padding: 10px;
+text-align: center;
+}
+
+#cats {
+	text-align: left;
+	
+}
+
+#cats li {
+	list-style: none;
+	margin: 5px; 
+}
+
+#cats a {
+	text-decoration: none;
+	color:  white; 
+	padding:  8px; 
+	margin: 10px; 
+	text-align: center;
+	font-size: 18px; 
+	font-family: COMIC SANS MS;
+}
+
+#cats a:hover {  color : black; font-weight: bolder;}
+
+#cats img { border : 2px solid white;
+			padding : 10px;}
+#products_box {
+	width :780px;
+	text-align: center;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+#single_product {
+	float : left;
+	min-width: 20px;
+	border : 2px solid black;
+	background-color: #72AC93;
+	padding: 5px;
+	margin : 5px;
+}
+
+#single_product img { border : 2px solid black;}
+
+#shopping_cart { width: 750px; height: 50px; background: black; color : white;}
+
+ #footer {
+	width:  1000px;
+ 	height: 100px;
+ 	background : #BD0102;
+ 	clear:both;
+ }  
